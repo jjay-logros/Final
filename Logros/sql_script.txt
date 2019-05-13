@@ -1,0 +1,50 @@
+ CREATE TABLE `OtherPeople` (
+
+  `idOtherPeople` int(11) NOT NULL,
+  `Lastname` varchar(45) DEFAULT NULL,
+  `Firstname` varchar(45) DEFAULT NULL,
+  `uidOthers` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `Password_idPassword` LONGTEXT NOT NULL
+);
+
+
+CREATE TABLE `Students` (
+  `idStudents` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `firstnameStudents` varchar(45) DEFAULT NULL,
+  `lastnameStudents` varchar(45) DEFAULT NULL,
+  `uidStudents` varchar(45) DEFAULT NULL,
+  `emailStudents` varchar(45) DEFAULT NULL,
+  `majorStudents` varchar(45) DEFAULT NULL,
+  `minorStudents` varchar(45) DEFAULT NULL,
+  `pwdStudents` LONGTEXT NOT NULL
+);
+
+
+
+CREATE TABLE `otherUsers` (
+
+  `idOthers` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `firstnameOthers` varchar(45) DEFAULT NULL,
+  `lastnameOthers` varchar(45) DEFAULT NULL,
+  `uidOthers` varchar(45) DEFAULT NULL,
+  `emailOthers` varchar(45) DEFAULT NULL,
+  `pwdOthers` LONGTEXT NOT NULL
+);
+
+
+
+CREATE TABLE `Password` (
+  `idPassword` int(11) NOT NULL,
+  `Username` varchar(45) DEFAULT NULL,
+  `Hash` varchar(45) DEFAULT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS `milestones` (
+  `milestone_id` varchar(150) NOT NULL,
+  `milestone` varchar(250) NOT NULL,
+  `start_date` varchar(30) NOT NULL
+  `end_date` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
